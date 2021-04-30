@@ -197,6 +197,9 @@
                             <constraint firstItem="itN-aw-fkd" firstAttribute="trailing" secondItem="OL4-EV-2jk" secondAttribute="trailing" constant="227" id="zTl-IQ-6bo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dashboardLabel" destination="OL4-EV-2jk" id="03F-tk-nIC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KM8-7L-DFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
