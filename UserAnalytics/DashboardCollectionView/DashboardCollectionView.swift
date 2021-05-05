@@ -12,6 +12,7 @@ class DashboardCollectionView: UICollectionView, UICollectionViewDelegate, UICol
     var cells = [DashboardCollectionModel]()
     
     
+    
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -42,14 +43,18 @@ class DashboardCollectionView: UICollectionView, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = dequeueReusableCell(withReuseIdentifier: DashboardCollectionViewCell.reuseId, for: indexPath) as! DashboardCollectionViewCell
-        cell.imageView.image = cells[indexPath.row].image
+        cell.percentsLabel.text = cells[indexPath.row].percents
+        cell.titleLabel.text = cells[indexPath.row].title
+        cell.centerLabel.text = cells[indexPath.row].center
+        cell.lessLabel.text = cells[indexPath.row].less
+        cell.targetLabel.text = cells[indexPath.row].target
         
         return cell
     }
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: Constants.dashboardItemWidth, height: frame.height)
+        return CGSize(width: Constants.dashboardItemWidth, height: frame.height )
     }
     
     

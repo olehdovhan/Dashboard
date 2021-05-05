@@ -25,7 +25,8 @@ class DashboardViewController: UIViewController {
         dashboardCollectionView.heightAnchor.constraint(equalToConstant: 167).isActive = true
         
         dashboardCollectionView.set(cells: DashboardCollectionModel.fetchDashboard())
-       
+        
+     
     }
     
 

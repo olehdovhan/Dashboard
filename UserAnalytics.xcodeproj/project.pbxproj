@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C273BD62642DD2D0093FABC /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C273BD52642DD2D0093FABC /* Poppins-Light.ttf */; };
 		0C3E160C2637230F007AF197 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C3E160B2637230F007AF197 /* Poppins-Regular.ttf */; };
 		0C83A8F7263B530B009A4475 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = 0C83A8F6263B530B009A4475 /* Poppins */; };
 		0C83A8F9263BD5FB009A4475 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83A8F8263BD5FB009A4475 /* DashboardViewController.swift */; };
 		0C83A8FB263BED09009A4475 /* DashboardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83A8FA263BED09009A4475 /* DashboardCollectionView.swift */; };
 		0C83A8FD263BEFBE009A4475 /* dashboardCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83A8FC263BEFBE009A4475 /* dashboardCollectionModel.swift */; };
 		0C83A8FF263BF4B8009A4475 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83A8FE263BF4B8009A4475 /* DashboardCollectionViewCell.swift */; };
+		0C8A5A21263D56C9007BCE64 /* TestVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8A5A20263D56C9007BCE64 /* TestVIew.swift */; };
 		0CC8A7EA2637094600B76737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8A7E92637094600B76737 /* AppDelegate.swift */; };
 		0CC8A7EC2637094600B76737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8A7EB2637094600B76737 /* SceneDelegate.swift */; };
 		0CC8A7EE2637094600B76737 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8A7ED2637094600B76737 /* RegisterViewController.swift */; };
@@ -23,12 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C273BD52642DD2D0093FABC /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../Downloads/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		0C3E160B2637230F007AF197 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		0C83A8F6263B530B009A4475 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Poppins; path = ../../../Downloads/Poppins; sourceTree = "<group>"; };
 		0C83A8F8263BD5FB009A4475 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		0C83A8FA263BED09009A4475 /* DashboardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionView.swift; sourceTree = "<group>"; };
 		0C83A8FC263BEFBE009A4475 /* dashboardCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardCollectionModel.swift; sourceTree = "<group>"; };
 		0C83A8FE263BF4B8009A4475 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C8A5A20263D56C9007BCE64 /* TestVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVIew.swift; sourceTree = "<group>"; };
 		0CC8A7E62637094600B76737 /* UserAnalytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserAnalytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC8A7E92637094600B76737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CC8A7EB2637094600B76737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 				0CC8A7EB2637094600B76737 /* SceneDelegate.swift */,
 				0CC8A7ED2637094600B76737 /* RegisterViewController.swift */,
 				0CC8A7EF2637094600B76737 /* Main.storyboard */,
+				0C8A5A20263D56C9007BCE64 /* TestVIew.swift */,
 				0C83A8F8263BD5FB009A4475 /* DashboardViewController.swift */,
+				0C273BD52642DD2D0093FABC /* Poppins-Light.ttf */,
 				0C3E160B2637230F007AF197 /* Poppins-Regular.ttf */,
 				0C83A8F6263B530B009A4475 /* Poppins */,
 				0CC8A80026371D1700B76737 /* Poppins-Bold.ttf */,
@@ -153,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C273BD62642DD2D0093FABC /* Poppins-Light.ttf in Resources */,
 				0C83A8F7263B530B009A4475 /* Poppins in Resources */,
 				0CC8A7F62637094600B76737 /* LaunchScreen.storyboard in Resources */,
 				0CC8A7F32637094600B76737 /* Assets.xcassets in Resources */,
@@ -172,6 +179,7 @@
 				0C83A8FB263BED09009A4475 /* DashboardCollectionView.swift in Sources */,
 				0CC8A7EE2637094600B76737 /* RegisterViewController.swift in Sources */,
 				0CC8A7EA2637094600B76737 /* AppDelegate.swift in Sources */,
+				0C8A5A21263D56C9007BCE64 /* TestVIew.swift in Sources */,
 				0CC8A7EC2637094600B76737 /* SceneDelegate.swift in Sources */,
 				0C83A8FF263BF4B8009A4475 /* DashboardCollectionViewCell.swift in Sources */,
 				0C83A8FD263BEFBE009A4475 /* dashboardCollectionModel.swift in Sources */,

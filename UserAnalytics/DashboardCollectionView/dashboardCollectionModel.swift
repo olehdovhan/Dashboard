@@ -11,15 +11,16 @@ import UIKit
 
 
 struct DashboardCollectionModel {
-    var image: UIImage
-    var percents: String
+   
+    var percents: String    
     var title: String
+    var center: String
     var target: String
     var less: String
     
     static func fetchDashboard() -> [DashboardCollectionModel] {
-        let firstItem = DashboardCollectionModel(image: UIImage(named: "person")!, percents: "50%", title: "Total Users Now", target: "Target Users 2000 user", less: "less 1000 user")
-        let secondItem = DashboardCollectionModel(image: UIImage(named: "notification")!, percents: "80%", title: "Active Users", target: "Target Users 1600 user", less: "less 400 unactive users")
+        let firstItem = DashboardCollectionModel( percents: "50%", title: "Total Users Now", center: "1000 User",  target: "Target Users 2000 user", less: "less 1000 user")
+        let secondItem = DashboardCollectionModel( percents: "49%", title: "Active Users",center: "2000 User", target: "Target Users 1600 user", less: "less 400 unactive users")
         return [firstItem, secondItem]
     }
 }
