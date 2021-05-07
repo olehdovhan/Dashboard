@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var dashboardLabel: UILabel!
     @IBOutlet var dateTextField: UITextField! {
@@ -21,10 +21,20 @@ class DashboardViewController: UIViewController {
     
     var dates = ["January 01 - 31", "February 01 - 28", "March 01 - 31", "April 01 - 30", "May 01 - 31", "June 01 - 30","July 01 - 31",
                  "August 01 - 31", "September 01 - 30", "October 01 - 31", "November 01 - 30", "December 01 - 31"]
+    var days = ["January 01", "January 02", "January 03", "January 04", "January 05", "January 06", "January 07", "January 08", "January 09", "January 10"]
+    
+    var costs = ["$2,029", "$1,2", "$1,1", "$5,111", "$2,1", "$2,1","$2,029", "$1,2", "$1,1", "$5,111"]
     var selectedDate : String?
     private var dashboardCollectionView = DashboardCollectionView()
     
     private var yearGraphCollectionView = YearGraphCollectionView()
+    
+    let tableview: UITableView = {
+           let tv = UITableView()
+           tv.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+           tv.translatesAutoresizingMaskIntoConstraints = false
+           return tv
+       }()
     
     
     override func viewDidLoad() {
@@ -43,10 +53,10 @@ class DashboardViewController: UIViewController {
         yearGraphCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         yearGraphCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         yearGraphCollectionView.topAnchor.constraint(equalTo: dashboardCollectionView.bottomAnchor, constant: 31).isActive = true
-        
         yearGraphCollectionView.heightAnchor.constraint(equalToConstant: 37).isActive = true
-        
         yearGraphCollectionView.set(cells: YearGraphCollectionModel.fetchYearGraph())
+        
+        setupTableView()
         
         
         
@@ -58,6 +68,40 @@ class DashboardViewController: UIViewController {
      
     }
     
+    func setupTableView() {
+        tableview.delegate = self
+        tableview.dataSource = self
+        
+        tableview.register(DayCell.self, forCellReuseIdentifier: "cellId")
+        
+        view.addSubview(tableview)
+        
+        NSLayoutConstraint.activate([
+            tableview.topAnchor.constraint(equalTo: self.dateTextField.bottomAnchor,constant: 20),
+            tableview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableview.rightAnchor.constraint(equalTo: self.view.rightAnchor),
+            tableview.leftAnchor.constraint(equalTo: self.view.leftAnchor)
+        ])
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return days.count
+    }
+    
+
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DayCell
+             cell.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+             cell.dayLabel.text = days[indexPath.row]
+             cell.costLabel.text = costs[indexPath.row]
+             return cell
+//        "Janua 0\(indexPath.row + 1)"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 37
+    }
 
  
     func choiceDate() {
