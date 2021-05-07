@@ -202,6 +202,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="January 01 - 30" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-bH-4Gp">
+                                <rect key="frame" x="24" y="413" width="110" height="15"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="07o-IZ-HQV"/>
+                                    <constraint firstAttribute="width" constant="110" id="dt2-vr-Zuj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="itN-aw-fkd"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -209,6 +219,7 @@
                             <constraint firstItem="itN-aw-fkd" firstAttribute="trailing" secondItem="Jwh-js-l4S" secondAttribute="trailing" constant="29" id="0Hz-sg-Wn0"/>
                             <constraint firstItem="SxZ-dr-iZ0" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="50" id="3qt-d7-NS5"/>
                             <constraint firstItem="Jwh-js-l4S" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="49" id="5F2-Gn-Gat"/>
+                            <constraint firstItem="CnR-bH-4Gp" firstAttribute="top" secondItem="3Yv-at-iV1" secondAttribute="bottom" constant="1" id="LMP-Vt-JHF"/>
                             <constraint firstItem="CdF-YX-K0h" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="48" id="LpY-So-to7"/>
                             <constraint firstItem="Nyt-oH-jXv" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="389" id="Mab-eo-yTM"/>
                             <constraint firstItem="Nyt-oH-jXv" firstAttribute="leading" secondItem="3Yv-at-iV1" secondAttribute="trailing" constant="132" id="RHY-LQ-LBX"/>
@@ -217,6 +228,7 @@
                             <constraint firstItem="Jwh-js-l4S" firstAttribute="leading" secondItem="CdF-YX-K0h" secondAttribute="trailing" constant="19" id="dAb-Bb-E0d"/>
                             <constraint firstItem="3Yv-at-iV1" firstAttribute="top" secondItem="OL4-EV-2jk" secondAttribute="bottom" constant="317" id="hXO-O7-n1Q"/>
                             <constraint firstItem="SxZ-dr-iZ0" firstAttribute="leading" secondItem="itN-aw-fkd" secondAttribute="leading" constant="29" id="l9C-2M-9hc"/>
+                            <constraint firstItem="CnR-bH-4Gp" firstAttribute="leading" secondItem="itN-aw-fkd" secondAttribute="leading" constant="24" id="ra8-z7-Ksx"/>
                             <constraint firstItem="OL4-EV-2jk" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="43" id="tf2-jQ-Z1i"/>
                             <constraint firstItem="itN-aw-fkd" firstAttribute="trailing" secondItem="OL4-EV-2jk" secondAttribute="trailing" constant="227" id="zTl-IQ-6bo"/>
                             <constraint firstItem="3Yv-at-iV1" firstAttribute="leading" secondItem="itN-aw-fkd" secondAttribute="leading" constant="29" id="zap-ql-UbU"/>
@@ -224,6 +236,7 @@
                     </view>
                     <connections>
                         <outlet property="dashboardLabel" destination="OL4-EV-2jk" id="03F-tk-nIC"/>
+                        <outlet property="dateTextField" destination="CnR-bH-4Gp" id="WgS-yv-xB5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KM8-7L-DFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
