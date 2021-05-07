@@ -182,6 +182,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Sales Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yv-at-iV1">
+                                <rect key="frame" x="29" y="389" width="160" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="32O-mX-3HD"/>
+                                    <constraint firstAttribute="height" constant="23" id="Yj1-zW-dm2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10,190" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyt-oH-jXv">
+                                <rect key="frame" x="321" y="389" width="64" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="Jtv-Ov-J5Q"/>
+                                    <constraint firstAttribute="height" constant="23" id="MUv-yz-62A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="itN-aw-fkd"/>
                         <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
@@ -190,11 +210,16 @@
                             <constraint firstItem="SxZ-dr-iZ0" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="50" id="3qt-d7-NS5"/>
                             <constraint firstItem="Jwh-js-l4S" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="49" id="5F2-Gn-Gat"/>
                             <constraint firstItem="CdF-YX-K0h" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="48" id="LpY-So-to7"/>
+                            <constraint firstItem="Nyt-oH-jXv" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="389" id="Mab-eo-yTM"/>
+                            <constraint firstItem="Nyt-oH-jXv" firstAttribute="leading" secondItem="3Yv-at-iV1" secondAttribute="trailing" constant="132" id="RHY-LQ-LBX"/>
+                            <constraint firstItem="itN-aw-fkd" firstAttribute="trailing" secondItem="Nyt-oH-jXv" secondAttribute="trailing" constant="29" id="VqD-U1-fk2"/>
                             <constraint firstItem="OL4-EV-2jk" firstAttribute="leading" secondItem="itN-aw-fkd" secondAttribute="leading" constant="62" id="aa9-2m-DYK"/>
                             <constraint firstItem="Jwh-js-l4S" firstAttribute="leading" secondItem="CdF-YX-K0h" secondAttribute="trailing" constant="19" id="dAb-Bb-E0d"/>
+                            <constraint firstItem="3Yv-at-iV1" firstAttribute="top" secondItem="OL4-EV-2jk" secondAttribute="bottom" constant="317" id="hXO-O7-n1Q"/>
                             <constraint firstItem="SxZ-dr-iZ0" firstAttribute="leading" secondItem="itN-aw-fkd" secondAttribute="leading" constant="29" id="l9C-2M-9hc"/>
                             <constraint firstItem="OL4-EV-2jk" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="43" id="tf2-jQ-Z1i"/>
                             <constraint firstItem="itN-aw-fkd" firstAttribute="trailing" secondItem="OL4-EV-2jk" secondAttribute="trailing" constant="227" id="zTl-IQ-6bo"/>
+                            <constraint firstItem="3Yv-at-iV1" firstAttribute="leading" secondItem="itN-aw-fkd" secondAttribute="leading" constant="29" id="zap-ql-UbU"/>
                         </constraints>
                     </view>
                     <connections>

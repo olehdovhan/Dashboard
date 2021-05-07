@@ -10,6 +10,7 @@ import UIKit
 class DashboardCollectionView: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
      
     var cells = [DashboardCollectionModel]()
+ 
     
     
     
@@ -36,6 +37,7 @@ class DashboardCollectionView: UICollectionView, UICollectionViewDelegate, UICol
         self.cells = cells
     }
     
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cells.count
     }
