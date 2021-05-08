@@ -25,7 +25,8 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var costs = ["$2,029", "$1,2", "$1,1", "$5,111", "$2,1", "$2,1","$2,029", "$1,2", "$1,1", "$5,111"]
     var selectedDate : String?
-    private var dashboardCollectionView = DashboardCollectionView()
+    
+    lazy private var dashboardCollectionView = DashboardCollectionView(parrentVc: self)
     
     private var yearGraphCollectionView = YearGraphCollectionView()
     
@@ -66,6 +67,13 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         createToolbar()
 
      
+    }
+    
+    func showNextVc() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "TotalUsersViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
     
     func setupTableView() {

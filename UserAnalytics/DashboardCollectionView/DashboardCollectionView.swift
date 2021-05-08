@@ -11,15 +11,19 @@ class DashboardCollectionView: UICollectionView, UICollectionViewDelegate, UICol
      
     var cells = [DashboardCollectionModel]()
  
+    let parrentVc: UIViewController!
     
-    
-    
-    init() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-      super.init(frame: .zero, collectionViewLayout: layout)
+    init(parrentVc: UIViewController) {
         
-        backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+        let layout = UICollectionViewFlowLayout()
+        self.parrentVc = parrentVc
+        layout.scrollDirection = .horizontal
+        super.init(frame: .zero, collectionViewLayout: layout)
+     
+     
+   
+        
+        backgroundColor =  #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
         delegate = self
         dataSource = self
         register(DashboardCollectionViewCell.self, forCellWithReuseIdentifier: DashboardCollectionViewCell.reuseId)
@@ -65,4 +69,10 @@ class DashboardCollectionView: UICollectionView, UICollectionViewDelegate, UICol
         fatalError("init(coder:) has not been implemented")
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let delegate = parrentVc as! DashboardViewController
+        delegate.showNextVc()
+    }
+
+
 }
