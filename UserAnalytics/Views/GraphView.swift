@@ -10,13 +10,13 @@ import UIKit
 class GraphView: UIView {
     
     var strokeEnd : CGFloat = 0.5
-    
+    var shapeLineWidth : CGFloat = 3
 
     override func draw(_ rect: CGRect) {
         
         
         let shapeLayer = CAShapeLayer()
-        shapeLayer.lineWidth = 3
+        shapeLayer.lineWidth = shapeLineWidth
         shapeLayer.lineCap = .round
         shapeLayer.fillColor = nil
         shapeLayer.strokeEnd = 1
@@ -24,7 +24,7 @@ class GraphView: UIView {
         shapeLayer.strokeColor = color
         
          let overShapeLayer = CAShapeLayer()
-        overShapeLayer.lineWidth = 3
+        overShapeLayer.lineWidth = shapeLineWidth
         overShapeLayer.lineCap = .round
         overShapeLayer.fillColor = nil
         overShapeLayer.strokeEnd = strokeEnd

@@ -11,13 +11,18 @@ class TestVIew: UIView {
 
 
     
+    
+    var shapeLineWidth : CGFloat = 10
+    var overShapeLineWidth : CGFloat = 10
+    
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         
         
         let shapeLayer = CAShapeLayer()
-        shapeLayer.lineWidth = 10
+        shapeLayer.lineWidth = shapeLineWidth
         shapeLayer.lineCap = .round
         shapeLayer.fillColor = nil
         shapeLayer.strokeEnd = 1
@@ -25,7 +30,7 @@ class TestVIew: UIView {
         shapeLayer.strokeColor = color
         
          let overShapeLayer = CAShapeLayer()
-        overShapeLayer.lineWidth = 10
+        overShapeLayer.lineWidth = overShapeLineWidth
         overShapeLayer.lineCap = .round
         overShapeLayer.fillColor = nil
         overShapeLayer.strokeEnd = 1

@@ -14,6 +14,12 @@
 		0C18CB2626458B09004E45C1 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C18CB2526458B09004E45C1 /* DayCell.swift */; };
 		0C273BD62642DD2D0093FABC /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C273BD52642DD2D0093FABC /* Poppins-Light.ttf */; };
 		0C2952422646B24B009D0BEE /* TotalUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2952412646B24B009D0BEE /* TotalUsersViewController.swift */; };
+		0C2952442646E2E3009D0BEE /* TotalUsersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2952432646E2E3009D0BEE /* TotalUsersCollectionView.swift */; };
+		0C2952472646E317009D0BEE /* TotalUsersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2952462646E317009D0BEE /* TotalUsersCollectionViewCell.swift */; };
+		0C2952492646E335009D0BEE /* TotalUsersCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2952482646E335009D0BEE /* TotalUsersCollectionModel.swift */; };
+		0C29524D2646FE80009D0BEE /* UserGraphCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29524C2646FE80009D0BEE /* UserGraphCollectionViewCell.swift */; };
+		0C29524F2646FE90009D0BEE /* UserGraphCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C29524E2646FE90009D0BEE /* UserGraphCollectionView.swift */; };
+		0C2952512646FEA5009D0BEE /* UserGraphCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2952502646FEA5009D0BEE /* UserGraphCollectionViewModel.swift */; };
 		0C3E160C2637230F007AF197 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C3E160B2637230F007AF197 /* Poppins-Regular.ttf */; };
 		0C83A8F7263B530B009A4475 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = 0C83A8F6263B530B009A4475 /* Poppins */; };
 		0C83A8F9263BD5FB009A4475 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C83A8F8263BD5FB009A4475 /* DashboardViewController.swift */; };
@@ -38,6 +44,12 @@
 		0C18CB2526458B09004E45C1 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		0C273BD52642DD2D0093FABC /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../Downloads/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		0C2952412646B24B009D0BEE /* TotalUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUsersViewController.swift; sourceTree = "<group>"; };
+		0C2952432646E2E3009D0BEE /* TotalUsersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUsersCollectionView.swift; sourceTree = "<group>"; };
+		0C2952462646E317009D0BEE /* TotalUsersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUsersCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C2952482646E335009D0BEE /* TotalUsersCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalUsersCollectionModel.swift; sourceTree = "<group>"; };
+		0C29524C2646FE80009D0BEE /* UserGraphCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C29524E2646FE90009D0BEE /* UserGraphCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphCollectionView.swift; sourceTree = "<group>"; };
+		0C2952502646FEA5009D0BEE /* UserGraphCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGraphCollectionViewModel.swift; sourceTree = "<group>"; };
 		0C3E160B2637230F007AF197 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		0C83A8F6263B530B009A4475 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Poppins; path = ../../../Downloads/Poppins; sourceTree = "<group>"; };
 		0C83A8F8263BD5FB009A4475 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +89,45 @@
 			path = YearGraphCollectionView;
 			sourceTree = "<group>";
 		};
+		0C2952452646E2EA009D0BEE /* TotalUsersCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0C2952432646E2E3009D0BEE /* TotalUsersCollectionView.swift */,
+				0C2952462646E317009D0BEE /* TotalUsersCollectionViewCell.swift */,
+				0C2952482646E335009D0BEE /* TotalUsersCollectionModel.swift */,
+			);
+			path = TotalUsersCollectionView;
+			sourceTree = "<group>";
+		};
+		0C29524A2646FD04009D0BEE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				0CC8A7ED2637094600B76737 /* RegisterViewController.swift */,
+				0C83A8F8263BD5FB009A4475 /* DashboardViewController.swift */,
+				0C2952412646B24B009D0BEE /* TotalUsersViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		0C29524B2646FE12009D0BEE /* UserGraphCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0C29524C2646FE80009D0BEE /* UserGraphCollectionViewCell.swift */,
+				0C29524E2646FE90009D0BEE /* UserGraphCollectionView.swift */,
+				0C2952502646FEA5009D0BEE /* UserGraphCollectionViewModel.swift */,
+			);
+			path = UserGraphCollectionView;
+			sourceTree = "<group>";
+		};
+		0C295252264709C6009D0BEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C8A5A20263D56C9007BCE64 /* TestVIew.swift */,
+				0C18CB182643565B004E45C1 /* GraphView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0C83A900263C1519009A4475 /* DashboardCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,13 +160,12 @@
 				0CC8A7E92637094600B76737 /* AppDelegate.swift */,
 				0C83A900263C1519009A4475 /* DashboardCollectionView */,
 				0CC8A7EB2637094600B76737 /* SceneDelegate.swift */,
-				0CC8A7ED2637094600B76737 /* RegisterViewController.swift */,
+				0C29524A2646FD04009D0BEE /* VC */,
 				0C18CB1326433313004E45C1 /* YearGraphCollectionView */,
 				0CC8A7EF2637094600B76737 /* Main.storyboard */,
-				0C2952412646B24B009D0BEE /* TotalUsersViewController.swift */,
-				0C8A5A20263D56C9007BCE64 /* TestVIew.swift */,
-				0C18CB182643565B004E45C1 /* GraphView.swift */,
-				0C83A8F8263BD5FB009A4475 /* DashboardViewController.swift */,
+				0C295252264709C6009D0BEE /* Views */,
+				0C2952452646E2EA009D0BEE /* TotalUsersCollectionView */,
+				0C29524B2646FE12009D0BEE /* UserGraphCollectionView */,
 				0C18CB2526458B09004E45C1 /* DayCell.swift */,
 				0C273BD52642DD2D0093FABC /* Poppins-Light.ttf */,
 				0C3E160B2637230F007AF197 /* Poppins-Regular.ttf */,
@@ -204,17 +254,23 @@
 			files = (
 				0C18CB172643451F004E45C1 /* YearGraphCollectionViewCell.swift in Sources */,
 				0C83A8FB263BED09009A4475 /* DashboardCollectionView.swift in Sources */,
+				0C2952492646E335009D0BEE /* TotalUsersCollectionModel.swift in Sources */,
+				0C2952472646E317009D0BEE /* TotalUsersCollectionViewCell.swift in Sources */,
 				0C18CB1526433369004E45C1 /* YearGraphCollectionModel.swift in Sources */,
+				0C29524F2646FE90009D0BEE /* UserGraphCollectionView.swift in Sources */,
 				0CC8A7EE2637094600B76737 /* RegisterViewController.swift in Sources */,
 				0CC8A7EA2637094600B76737 /* AppDelegate.swift in Sources */,
 				0C18CB2626458B09004E45C1 /* DayCell.swift in Sources */,
+				0C2952442646E2E3009D0BEE /* TotalUsersCollectionView.swift in Sources */,
 				0C8A5A21263D56C9007BCE64 /* TestVIew.swift in Sources */,
 				0CC8A7EC2637094600B76737 /* SceneDelegate.swift in Sources */,
 				0C83A8FF263BF4B8009A4475 /* DashboardCollectionViewCell.swift in Sources */,
 				0C18CB1226432ECA004E45C1 /* YearGraphCollectionView.swift in Sources */,
+				0C2952512646FEA5009D0BEE /* UserGraphCollectionViewModel.swift in Sources */,
 				0C83A8FD263BEFBE009A4475 /* dashboardCollectionModel.swift in Sources */,
 				0C83A8F9263BD5FB009A4475 /* DashboardViewController.swift in Sources */,
 				0C2952422646B24B009D0BEE /* TotalUsersViewController.swift in Sources */,
+				0C29524D2646FE80009D0BEE /* UserGraphCollectionViewCell.swift in Sources */,
 				0C18CB192643565B004E45C1 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

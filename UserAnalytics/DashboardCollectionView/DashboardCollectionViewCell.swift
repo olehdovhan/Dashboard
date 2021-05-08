@@ -94,8 +94,9 @@ class DashboardCollectionViewCell: UICollectionViewCell {
         view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30).isActive = true
         view.topAnchor.constraint(equalTo: topAnchor, constant: 25).isActive = true
         
-        percentsLabel.topAnchor.constraint(equalTo: topAnchor, constant: 51).isActive = true
-        percentsLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 54).isActive = true
+        percentsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        percentsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    
         
         targetLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32).isActive = true
         targetLabel.topAnchor.constraint(equalTo: topAnchor, constant: 126).isActive = true
