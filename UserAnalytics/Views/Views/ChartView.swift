@@ -1,5 +1,5 @@
 //
-//  GraphView.swift
+//  ChartView.swift
 //  UserAnalytics
 //
 //  Created by Oleh Dovhan on 06.05.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GraphView: UIView {
+class ChartView: UIView {
     
     var strokeEnd : CGFloat = 0.5
     var shapeLineWidth : CGFloat = 3

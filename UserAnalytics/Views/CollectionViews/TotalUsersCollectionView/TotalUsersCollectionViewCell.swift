@@ -35,8 +35,8 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
     
     
     
-    let view: TestVIew = {
-        let view = TestVIew()
+    let circularChart: CircularChartView = {
+        let view = CircularChartView()
         view.backgroundColor = #colorLiteral(red: 0.2832400501, green: 0.3001738489, blue: 0.3875153065, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
@@ -106,7 +106,7 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = #colorLiteral(red: 0.2832400501, green: 0.3001738489, blue: 0.3875153065, alpha: 1)
-        addSubview(view)
+        addSubview(circularChart)
         addSubview(percentsLabel)
         addSubview(targetLabel)
         addSubview(descriptionLabel)
@@ -117,13 +117,13 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
         addSubview(secondImage)
 
         
-        view.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        view.widthAnchor.constraint(equalToConstant: 120).isActive = true
-        view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26).isActive = true
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 58).isActive = true
+        circularChart.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        circularChart.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        circularChart.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26).isActive = true
+        circularChart.topAnchor.constraint(equalTo: topAnchor, constant: 58).isActive = true
         
-        percentsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        percentsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        percentsLabel.centerXAnchor.constraint(equalTo: circularChart.centerXAnchor).isActive = true
+        percentsLabel.centerYAnchor.constraint(equalTo: circularChart.centerYAnchor).isActive = true
         
         targetLabel.widthAnchor.constraint(equalToConstant: 119).isActive = true
         targetLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -9).isActive = true

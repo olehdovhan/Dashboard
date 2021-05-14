@@ -1,5 +1,5 @@
 //
-//  TestVIew.swift
+//  CircularChartView.swift
 //  UserAnalytics
 //
 //  Created by Oleh Dovhan on 01.05.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestVIew: UIView {
+class CircularChartView: UIView {
 
 
     

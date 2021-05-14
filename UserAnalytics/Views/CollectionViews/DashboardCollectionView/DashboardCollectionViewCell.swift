@@ -11,8 +11,8 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     
     static let reuseId = "DashboardCollectionViewCell"
     
-    let view: TestVIew = {
-        let view = TestVIew()
+    let circularChart: CircularChartView = {
+        let view = CircularChartView()
         view.backgroundColor = #colorLiteral(red: 0.2832400501, green: 0.3001738489, blue: 0.3875153065, alpha: 1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
@@ -81,7 +81,7 @@ class DashboardCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = #colorLiteral(red: 0.2832400501, green: 0.3001738489, blue: 0.3875153065, alpha: 1)
-        addSubview(view)
+        addSubview(circularChart)
         addSubview(percentsLabel)
         addSubview(targetLabel)
         addSubview(centerLabel)
@@ -89,13 +89,13 @@ class DashboardCollectionViewCell: UICollectionViewCell {
         addSubview(lessLabel)
         
         
-        view.heightAnchor.constraint(equalToConstant: 68).isActive = true
-        view.widthAnchor.constraint(equalToConstant: 68).isActive = true
-        view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30).isActive = true
-        view.topAnchor.constraint(equalTo: topAnchor, constant: 25).isActive = true
+        circularChart.heightAnchor.constraint(equalToConstant: 68).isActive = true
+        circularChart.widthAnchor.constraint(equalToConstant: 68).isActive = true
+        circularChart.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30).isActive = true
+        circularChart.topAnchor.constraint(equalTo: topAnchor, constant: 25).isActive = true
         
-        percentsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        percentsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        percentsLabel.centerXAnchor.constraint(equalTo: circularChart.centerXAnchor).isActive = true
+        percentsLabel.centerYAnchor.constraint(equalTo: circularChart.centerYAnchor).isActive = true
     
         
         targetLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32).isActive = true
@@ -105,9 +105,9 @@ class DashboardCollectionViewCell: UICollectionViewCell {
         lessLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -31).isActive = true
         
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 37).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: 21).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: circularChart.trailingAnchor, constant: 21).isActive = true
         
-        centerLabel.leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: 21).isActive = true
+        centerLabel.leadingAnchor.constraint(equalTo: circularChart.trailingAnchor, constant: 21).isActive = true
         centerLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
         
     }

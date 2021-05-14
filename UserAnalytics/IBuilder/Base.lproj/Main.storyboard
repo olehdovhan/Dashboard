@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bcm-g9-buj">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -128,12 +128,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confirmPassword" destination="WMM-9m-CiC" id="too-fa-cPf"/>
-                        <outlet property="email" destination="1N6-3d-vD9" id="RQz-Ed-CcT"/>
-                        <outlet property="name" destination="DeI-7f-o1h" id="HJh-4K-HVK"/>
-                        <outlet property="password" destination="zY2-5G-xPI" id="xqJ-w4-5N4"/>
-                        <outlet property="register" destination="inQ-n5-cNM" id="kep-Hj-rX1"/>
-                        <outlet property="userName" destination="FGb-k0-izV" id="Aei-Tm-dm0"/>
+                        <outlet property="confirmPasswordTextField" destination="WMM-9m-CiC" id="too-fa-cPf"/>
+                        <outlet property="emailTextField" destination="1N6-3d-vD9" id="RQz-Ed-CcT"/>
+                        <outlet property="nameTextField" destination="DeI-7f-o1h" id="HJh-4K-HVK"/>
+                        <outlet property="passwordTextField" destination="zY2-5G-xPI" id="xqJ-w4-5N4"/>
+                        <outlet property="registerButton" destination="inQ-n5-cNM" id="kep-Hj-rX1"/>
+                        <outlet property="userNameTextField" destination="FGb-k0-izV" id="Aei-Tm-dm0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

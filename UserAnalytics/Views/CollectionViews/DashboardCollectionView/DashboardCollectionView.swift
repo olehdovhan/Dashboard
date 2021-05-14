@@ -71,7 +71,7 @@ class DashboardCollectionView: UICollectionView, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let delegate = parrentVc as! DashboardViewController
-        delegate.showNextVc()
+        delegate.showNextViewController()
     }
 
 

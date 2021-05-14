@@ -8,80 +8,75 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-    
-    
-    
-    @IBOutlet var register: UIButton!
-    @IBOutlet var name: UITextField! {
-        didSet{  name.attributedPlaceholder = NSAttributedString(string: "Name",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
-        }
+  @IBOutlet var registerButton: UIButton!
+  @IBOutlet var nameTextField: UITextField! {
+    didSet{  nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
     }
-    
-    @IBOutlet var email: UITextField! {
-        didSet{  email.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                                  attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
-        }
+  }
+  
+  @IBOutlet var emailTextField: UITextField! {
+    didSet{  emailTextField.attributedPlaceholder = NSAttributedString(string: "Email",
+                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
     }
-    
-    @IBOutlet var userName: UITextField! {
-        didSet{  userName.attributedPlaceholder = NSAttributedString(string: "Username",
-                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
-        }
+  }
+  
+  @IBOutlet var userNameTextField: UITextField! {
+    didSet{  userNameTextField.attributedPlaceholder = NSAttributedString(string: "Username",
+                                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
     }
-    
-    @IBOutlet var password: UITextField! {
-        didSet{  password.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
-        }
+  }
+  
+  @IBOutlet var passwordTextField: UITextField! {
+    didSet{  passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
     }
-    
-    
-    @IBOutlet var confirmPassword: UITextField! {
-        didSet{  confirmPassword.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
-                                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
-        }
+  }
+  
+  
+  @IBOutlet var confirmPasswordTextField: UITextField! {
+    didSet{  confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
+                                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupAddTargetIsNotEmptyTextFields()
-    }
-    
-    @IBAction func registerButton(_ sender: Any) {
-    }
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupAddTargetIsNotEmptyTextFields()
+  }
+  
+  @IBAction func registerButton(_ sender: Any) {
+  }
 }
 
 extension RegisterViewController: UITextFieldDelegate {
-    func setupAddTargetIsNotEmptyTextFields() {
-        register.isEnabled = false
-        name.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                       for: .editingChanged)
-        userName.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                           for: .editingChanged)
-        email.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                        for: .editingChanged)
-        password.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                           for: .editingChanged)
-        confirmPassword.addTarget(self, action: #selector(textFieldsIsNotEmpty),
-                                  for: .editingChanged)
+  func setupAddTargetIsNotEmptyTextFields() {
+    registerButton.isEnabled = false
+    nameTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                            for: .editingChanged)
+    userNameTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                                for: .editingChanged)
+    emailTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                             for: .editingChanged)
+    passwordTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                                for: .editingChanged)
+    confirmPasswordTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
+                                       for: .editingChanged)
+  }
+  
+  @objc func textFieldsIsNotEmpty(sender: UITextField) {
+    guard
+      let name = nameTextField.text, !name.isEmpty,
+      let userName = userNameTextField.text, !userName.isEmpty,
+      let email = emailTextField.text, !email.isEmpty,
+      let password = passwordTextField.text, !password.isEmpty,
+      let confirmPassword = confirmPasswordTextField.text,
+      password == confirmPassword
+    else{
+      self.registerButton.isEnabled = false
+      return
     }
-   
-    @objc func textFieldsIsNotEmpty(sender: UITextField) {
-        
-        guard
-            let name = name.text, !name.isEmpty,
-            let userName = userName.text, !userName.isEmpty,
-            let email = email.text, !email.isEmpty,
-            let password = password.text, !password.isEmpty,
-            let confirmPassword = confirmPassword.text,
-            password == confirmPassword
-        else
-        {
-            self.register.isEnabled = false
-            return
-        }
-        register.isEnabled = true
-    }
+    registerButton.isEnabled = true
+  }
 }
 

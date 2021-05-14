@@ -58,7 +58,7 @@ class YearGraphCollectionView: UICollectionView, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: YearGraphCollectionViewCell.reuseId, for: indexPath) as! YearGraphCollectionViewCell
         cell.yearLabel.text = cells[indexPath.row].year
-        cell.view.strokeEnd = cells[indexPath.row].strokeEnd
+        cell.chart.strokeEnd = cells[indexPath.row].strokeEnd
         
            return cell
     }

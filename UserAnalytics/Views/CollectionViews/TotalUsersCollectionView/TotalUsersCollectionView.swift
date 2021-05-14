@@ -53,8 +53,8 @@ class TotalUsersCollectionView: UICollectionView, UICollectionViewDelegate, UICo
         cell.descriptionLabel.text = cells[indexPath.row].description
         cell.lessLabel.text = cells[indexPath.row].less
         cell.targetLabel.text = cells[indexPath.row].target
-        cell.view.shapeLineWidth = 14
-        cell.view.overShapeLineWidth = 18
+        cell.circularChart.shapeLineWidth = 14
+        cell.circularChart.overShapeLineWidth = 18
         
         return cell
     }
