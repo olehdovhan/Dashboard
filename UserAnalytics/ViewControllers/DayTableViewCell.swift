@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DayCell: UITableViewCell {
+class DayTableViewCell: UITableViewCell {
     
     
     

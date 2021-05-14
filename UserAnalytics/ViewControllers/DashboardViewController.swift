@@ -80,7 +80,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         tableview.delegate = self
         tableview.dataSource = self
         
-        tableview.register(DayCell.self, forCellReuseIdentifier: "cellId")
+        tableview.register(DayTableViewCell.self, forCellReuseIdentifier: "cellId")
         
         view.addSubview(tableview)
         
@@ -99,7 +99,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DayCell
+        let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DayTableViewCell
              cell.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
              cell.dayLabel.text = days[indexPath.row]
              cell.costLabel.text = costs[indexPath.row]
