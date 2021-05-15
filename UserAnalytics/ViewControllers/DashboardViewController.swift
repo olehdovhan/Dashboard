@@ -7,17 +7,19 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DashboardViewController: UIViewController {
   @IBOutlet var dashboardLabel: UILabel!
   @IBOutlet var dateTextField: UITextField! {
-    didSet{  dateTextField.attributedPlaceholder = NSAttributedString(string: "January 01 - 31",
-                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-Regular", size: 10)! ])
+    didSet{
+      dateTextField.attributedPlaceholder = NSAttributedString(string: "January 01 - 31",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-Regular",
+                                                                                                                                                                       size: 10)!])
       dateTextField.font = UIFont(name: "Poppins-Regular", size: 10)
       dateTextField.textColor = .white
     }
   }
   var datesArray = ["January 01 - 31", "February 01 - 28", "March 01 - 31", "April 01 - 30", "May 01 - 31", "June 01 - 30","July 01 - 31",
-               "August 01 - 31", "September 01 - 30", "October 01 - 31", "November 01 - 30", "December 01 - 31"]
+                    "August 01 - 31", "September 01 - 30", "October 01 - 31", "November 01 - 30", "December 01 - 31"]
   var daysArray = ["January 01", "January 02", "January 03", "January 04", "January 05", "January 06", "January 07", "January 08", "January 09", "January 10"]
   var costsArray = ["$2,029", "$1,2", "$1,1", "$5,111", "$2,1", "$2,1","$2,029", "$1,2", "$1,1", "$5,111"]
   var selectedDate : String?
@@ -47,7 +49,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     setupTableView()
     choiceDate()
     createToolbar()
-    }
+  }
   
   func showNextViewController() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -67,22 +69,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
       tableview.rightAnchor.constraint(equalTo: self.view.rightAnchor),
       tableview.leftAnchor.constraint(equalTo: self.view.leftAnchor)
     ])
-  }
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return daysArray.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DayTableViewCell
-    cell.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
-    cell.dayLabel.text = daysArray[indexPath.row]
-    cell.costLabel.text = costsArray[indexPath.row]
-    return cell
-  }
-  
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 37
   }
   
   func choiceDate() {
@@ -108,6 +94,26 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
   
   @objc func dismissKeyboard() {
     view.endEditing(true)
+  }
+}
+
+extension DashboardViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 37
+  }
+}
+
+extension DashboardViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DayTableViewCell
+    cell.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+    cell.dayLabel.text = daysArray[indexPath.row]
+    cell.costLabel.text = costsArray[indexPath.row]
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return daysArray.count
   }
 }
 

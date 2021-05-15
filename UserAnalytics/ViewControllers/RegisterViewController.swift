@@ -10,33 +10,34 @@ import UIKit
 class RegisterViewController: UIViewController {
   @IBOutlet var registerButton: UIButton!
   @IBOutlet var nameTextField: UITextField! {
-    didSet{  nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
-                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
+    didSet{
+      nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
-  
   @IBOutlet var emailTextField: UITextField! {
-    didSet{  emailTextField.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
+    didSet{
+      emailTextField.attributedPlaceholder = NSAttributedString(string: "Email",
+                                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
-  
   @IBOutlet var userNameTextField: UITextField! {
-    didSet{  userNameTextField.attributedPlaceholder = NSAttributedString(string: "Username",
-                                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
+    didSet{
+      userNameTextField.attributedPlaceholder = NSAttributedString(string: "Username",
+                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
-  
   @IBOutlet var passwordTextField: UITextField! {
-    didSet{  passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
+    didSet{
+      passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
-  
-  
   @IBOutlet var confirmPasswordTextField: UITextField! {
-    didSet{  confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
-                                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)! ])
+    didSet{
+      confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
+                                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                                                       NSAttributedString.Key.font: UIFont(name:"Poppins-regular", size: 18)!])
     }
   }
   
@@ -79,4 +80,3 @@ extension RegisterViewController: UITextFieldDelegate {
     registerButton.isEnabled = true
   }
 }
-
