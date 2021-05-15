@@ -14,7 +14,7 @@ class TotalUsersCollectionView: UICollectionView {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
     super.init(frame: .zero, collectionViewLayout: layout)
-    backgroundColor =  #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+    backgroundColor =  UIColor(named: "Background")
     delegate = self
     dataSource = self
     register(TotalUsersCollectionViewCell.self, forCellWithReuseIdentifier: TotalUsersCollectionViewCell.reuseId)

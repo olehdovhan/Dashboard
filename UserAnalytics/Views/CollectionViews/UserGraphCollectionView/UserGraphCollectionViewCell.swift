@@ -11,7 +11,7 @@ class UserGraphCollectionViewCell: UICollectionViewCell {
   static let reuseId = "UserGraphCollectionViewCell"
   let chart: ChartView = {
     let view = ChartView()
-    view.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+    view.backgroundColor = UIColor(named: "Background")
     view.translatesAutoresizingMaskIntoConstraints = false
     view.contentMode = .scaleAspectFit
     return view
@@ -20,14 +20,14 @@ class UserGraphCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins", size: 10)
     label.textAlignment = .center
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+    backgroundColor = UIColor(named: "Background")
     addSubview(chart)
     addSubview(yearLabel)
     chart.topAnchor.constraint(equalTo: topAnchor).isActive = true

@@ -17,14 +17,14 @@ class CircularChartView: UIView {
     shapeLayer.lineCap = .round
     shapeLayer.fillColor = nil
     shapeLayer.strokeEnd = 1
-    let color = #colorLiteral(red: 0.2705882353, green: 0.2784313725, blue: 0.3607843137, alpha: 1).cgColor
+    let color = UIColor(named: "shapeLayer")?.cgColor
     shapeLayer.strokeColor = color
     let overShapeLayer = CAShapeLayer()
     overShapeLayer.lineWidth = overShapeLineWidth
     overShapeLayer.lineCap = .round
     overShapeLayer.fillColor = nil
     overShapeLayer.strokeEnd = 1
-    let colorOver = #colorLiteral(red: 0.1284031272, green: 0.6345581412, blue: 0.9573553205, alpha: 1).cgColor
+    let colorOver = UIColor(named: "overShapeLayer")?.cgColor
     overShapeLayer.strokeColor = colorOver
     let diametr: CGFloat = min(bounds.height, bounds.width) - shapeLayer.lineWidth
     let y = self.bounds.height / 2 - diametr / 2

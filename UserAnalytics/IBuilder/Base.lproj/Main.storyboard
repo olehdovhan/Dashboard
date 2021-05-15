@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -114,7 +115,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="5f8-0W-UJs" firstAttribute="top" secondItem="qBM-vQ-oe7" secondAttribute="bottom" constant="27" id="3mb-lF-Hsf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5f8-0W-UJs" secondAttribute="trailing" constant="56" id="FR2-ZZ-GjS"/>
@@ -204,7 +205,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="January 01 - 30" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CnR-bH-4Gp">
                                 <rect key="frame" x="24" y="413" width="129.33333333333334" height="15"/>
-                                <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="Background"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="07o-IZ-HQV"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="dt2-vr-Zuj"/>
@@ -214,7 +215,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="itN-aw-fkd"/>
-                        <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="itN-aw-fkd" firstAttribute="trailing" secondItem="Jwh-js-l4S" secondAttribute="trailing" constant="29" id="0Hz-sg-Wn0"/>
                             <constraint firstItem="SxZ-dr-iZ0" firstAttribute="top" secondItem="itN-aw-fkd" secondAttribute="top" constant="50" id="3qt-d7-NS5"/>
@@ -285,7 +286,7 @@
                                 <state key="normal" image="person"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chart Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5J-9D-LeC">
-                                <rect key="frame" x="29" y="420" width="89" height="19.666666666666686"/>
+                                <rect key="frame" x="29" y="420" width="89" height="16.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="lqH-gU-5Z0"/>
                                 </constraints>
@@ -294,7 +295,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In 2012 - 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS2-FU-UsV">
-                                <rect key="frame" x="30" y="439.66666666666669" width="118" height="14"/>
+                                <rect key="frame" x="30" y="436.33333333333331" width="118" height="11.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="89" id="sxq-AJ-zfF"/>
                                 </constraints>
@@ -320,7 +321,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9bs-03-rNK"/>
-                        <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="ml1-67-Efl" firstAttribute="top" secondItem="9bs-03-rNK" secondAttribute="top" constant="50" id="2Js-xl-T4w"/>
                             <constraint firstItem="U5J-9D-LeC" firstAttribute="leading" secondItem="9bs-03-rNK" secondAttribute="leading" constant="29" id="44I-0z-eqN"/>
@@ -353,5 +354,8 @@
         <image name="dashboard" width="22" height="14"/>
         <image name="notification" width="18" height="20"/>
         <image name="person" width="18" height="18"/>
+        <namedColor name="Background">
+            <color red="0.1176470588" green="0.1176470588" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

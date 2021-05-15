@@ -23,7 +23,7 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
   }()
   let circularChart: CircularChartView = {
     let view = CircularChartView()
-    view.backgroundColor = #colorLiteral(red: 0.2832400501, green: 0.3001738489, blue: 0.3875153065, alpha: 1)
+    view.backgroundColor = UIColor(named: "elementsBackground")
     view.translatesAutoresizingMaskIntoConstraints = false
     view.contentMode = .scaleAspectFit
     return view
@@ -32,7 +32,7 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins", size: 20)
     label.textAlignment = .center
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
@@ -40,7 +40,7 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins-Regular", size: 15)
     label.textAlignment = .center
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
@@ -48,7 +48,7 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins-Regular", size: 10)
     label.textAlignment = .left
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.numberOfLines = .zero
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
@@ -57,7 +57,7 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins", size: 9)
     label.textAlignment = .left
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
@@ -65,14 +65,14 @@ class TotalUsersCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins", size: 10)
     label.textAlignment = .left
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = #colorLiteral(red: 0.2832400501, green: 0.3001738489, blue: 0.3875153065, alpha: 1)
+    backgroundColor = UIColor(named: "elementsBackground")
     addSubview(circularChart)
     addSubview(percentsLabel)
     addSubview(targetLabel)

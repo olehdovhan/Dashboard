@@ -27,7 +27,7 @@ class DashboardViewController: UIViewController {
   private var yearGraphCollectionView = YearGraphCollectionView()
   let tableview: UITableView = {
     let tv = UITableView()
-    tv.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+    tv.backgroundColor = UIColor(named: "Background")
     tv.translatesAutoresizingMaskIntoConstraints = false
     return tv
   }()
@@ -75,7 +75,7 @@ class DashboardViewController: UIViewController {
     let elementPicker = UIPickerView()
     elementPicker.delegate = self
     dateTextField.inputView = elementPicker
-    elementPicker.backgroundColor = #colorLiteral(red: 0.2832400501, green: 0.3001738489, blue: 0.3875153065, alpha: 1)
+    elementPicker.backgroundColor = UIColor(named: "Background")
   }
   
   func createToolbar() {
@@ -88,8 +88,8 @@ class DashboardViewController: UIViewController {
     toolbar.setItems([doneButton], animated: true)
     toolbar.isUserInteractionEnabled = true
     dateTextField.inputAccessoryView = toolbar
-    toolbar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    toolbar.barTintColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+    toolbar.tintColor = .white
+    toolbar.barTintColor = UIColor(named: "Background")
   }
   
   @objc func dismissKeyboard() {
@@ -106,7 +106,7 @@ extension DashboardViewController: UITableViewDelegate {
 extension DashboardViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableview.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! DayTableViewCell
-    cell.backgroundColor = #colorLiteral(red: 0.1570699513, green: 0.1604697406, blue: 0.2419916391, alpha: 1)
+    cell.backgroundColor = UIColor(named: "Background")
     cell.dayLabel.text = daysArray[indexPath.row]
     cell.costLabel.text = costsArray[indexPath.row]
     return cell

@@ -18,7 +18,7 @@ class DayTableViewCell: UITableViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins-Regular", size: 14)
     label.textAlignment = .center
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
@@ -26,7 +26,7 @@ class DayTableViewCell: UITableViewCell {
     let label = UILabel()
     label.font = UIFont(name: "Poppins", size: 13)
     label.textAlignment = .right
-    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    label.textColor = .white
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
