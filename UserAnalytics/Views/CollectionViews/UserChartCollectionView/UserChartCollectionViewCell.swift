@@ -7,8 +7,8 @@
 
 import UIKit
 
-class UserGraphCollectionViewCell: UICollectionViewCell {
-  static let reuseId = "UserGraphCollectionViewCell"
+class UserChartCollectionViewCell: UICollectionViewCell {
+  static let reuseId = "UserChartCollectionViewCell"
   let chart: ChartView = {
     let view = ChartView()
     view.backgroundColor = UIColor(named: "Background")
@@ -49,9 +49,9 @@ class UserGraphCollectionViewCell: UICollectionViewCell {
   }
 }
 
-struct UserGraphConstants {
+struct UserChartConstants {
   static let leftDistanceToView: CGFloat = 29
   static let rightDistanceToView: CGFloat = 29
-  static let userGraphMinimumLineSpacing: CGFloat = 25
-  static let userGraphItemWidth = (UIScreen.main.bounds.width - UserGraphConstants.leftDistanceToView - UserGraphConstants.rightDistanceToView - (UserGraphConstants.userGraphMinimumLineSpacing * 6) ) / 7
+  static let userChartMinimumLineSpacing: CGFloat = 25
+  static let userChartItemWidth = (UIScreen.main.bounds.width - UserChartConstants.leftDistanceToView - UserChartConstants.rightDistanceToView - (UserChartConstants.userChartMinimumLineSpacing * 6) ) / 7
 }

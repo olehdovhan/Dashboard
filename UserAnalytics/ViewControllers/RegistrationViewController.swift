@@ -7,32 +7,37 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegistrationViewController: UIViewController {
   @IBOutlet var registerButton: UIButton!
+  
   @IBOutlet var nameTextField: UITextField! {
     didSet{
       nameTextField.attributedPlaceholder = NSAttributedString(string: "Name",
                                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
+  
   @IBOutlet var emailTextField: UITextField! {
     didSet{
       emailTextField.attributedPlaceholder = NSAttributedString(string: "Email",
                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
+  
   @IBOutlet var userNameTextField: UITextField! {
     didSet{
       userNameTextField.attributedPlaceholder = NSAttributedString(string: "Username",
                                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
+  
   @IBOutlet var passwordTextField: UITextField! {
     didSet{
       passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
                                                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont(name: "Poppins-regular", size: 18)!])
     }
   }
+  
   @IBOutlet var confirmPasswordTextField: UITextField! {
     didSet{
       confirmPasswordTextField.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
@@ -40,19 +45,19 @@ class RegisterViewController: UIViewController {
                                                                                        NSAttributedString.Key.font: UIFont(name:"Poppins-regular", size: 18)!])
     }
   }
-  
+  //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupAddTargetIsNotEmptyTextFields()
+    registerButton.isEnabled = false
+    setupTargetsForTextFields()
   }
   
   @IBAction func registerButton(_ sender: Any) {
   }
 }
 
-extension RegisterViewController: UITextFieldDelegate {
-  func setupAddTargetIsNotEmptyTextFields() {
-    registerButton.isEnabled = false
+extension RegistrationViewController: UITextFieldDelegate {
+  func setupTargetsForTextFields() {
     nameTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),
                             for: .editingChanged)
     userNameTextField.addTarget(self, action: #selector(textFieldsIsNotEmpty),

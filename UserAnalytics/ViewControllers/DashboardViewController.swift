@@ -8,6 +8,7 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
+  //MARK: - IBOutlet
   @IBOutlet var dashboardLabel: UILabel!
   @IBOutlet var dateTextField: UITextField! {
     didSet{
@@ -18,34 +19,27 @@ class DashboardViewController: UIViewController {
       dateTextField.textColor = .white
     }
   }
+  //MARK: - Stubs
   var datesArray = ["January 01 - 31", "February 01 - 28", "March 01 - 31", "April 01 - 30", "May 01 - 31", "June 01 - 30","July 01 - 31",
                     "August 01 - 31", "September 01 - 30", "October 01 - 31", "November 01 - 30", "December 01 - 31"]
   var daysArray = ["January 01", "January 02", "January 03", "January 04", "January 05", "January 06", "January 07", "January 08", "January 09", "January 10"]
   var costsArray = ["$2,029", "$1,2", "$1,1", "$5,111", "$2,1", "$2,1","$2,029", "$1,2", "$1,1", "$5,111"]
   var selectedDate : String?
+  
   lazy private var dashboardCollectionView = DashboardCollectionView(parrentVc: self)
-  private var yearGraphCollectionView = YearGraphCollectionView()
+  
+  private var yearChartCollectionView = YearChartCollectionView()
+  
   let tableview: UITableView = {
     let tv = UITableView()
     tv.backgroundColor = UIColor(named: "Background")
     tv.translatesAutoresizingMaskIntoConstraints = false
     return tv
   }()
-  
+  //MARK: - Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.addSubview(dashboardCollectionView)
-    dashboardCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    dashboardCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-    dashboardCollectionView.topAnchor.constraint(equalTo: dashboardLabel.bottomAnchor, constant: 40).isActive = true
-    dashboardCollectionView.heightAnchor.constraint(equalToConstant: 167).isActive = true
-    dashboardCollectionView.set(cells: DashboardCollectionModel.fetchDashboard())
-    view.addSubview(yearGraphCollectionView)
-    yearGraphCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    yearGraphCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-    yearGraphCollectionView.topAnchor.constraint(equalTo: dashboardCollectionView.bottomAnchor, constant: 31).isActive = true
-    yearGraphCollectionView.heightAnchor.constraint(equalToConstant: 37).isActive = true
-    yearGraphCollectionView.set(cells: YearGraphCollectionModel.fetchYearGraph())
+    setupCollectionView()
     setupTableView()
     choiceDate()
     createToolbar()
@@ -58,7 +52,28 @@ class DashboardViewController: UIViewController {
     self.present(vc, animated: true)
   }
   
-  func setupTableView() {
+  @objc func dismissKeyboard() {
+    view.endEditing(true)
+  }
+}
+//MARK: - Private methods
+extension DashboardViewController {
+  private func setupCollectionView() {
+    view.addSubview(dashboardCollectionView)
+    dashboardCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    dashboardCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    dashboardCollectionView.topAnchor.constraint(equalTo: dashboardLabel.bottomAnchor, constant: 40).isActive = true
+    dashboardCollectionView.heightAnchor.constraint(equalToConstant: 167).isActive = true
+    dashboardCollectionView.set(cells: DashboardCollectionModel.fetchDashboard())
+    view.addSubview(yearChartCollectionView)
+    yearChartCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+    yearChartCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    yearChartCollectionView.topAnchor.constraint(equalTo: dashboardCollectionView.bottomAnchor, constant: 31).isActive = true
+    yearChartCollectionView.heightAnchor.constraint(equalToConstant: 37).isActive = true
+    yearChartCollectionView.set(cells: YearChartCollectionModel.fetchYearGraph())
+  }
+  
+  private func setupTableView() {
     tableview.delegate = self
     tableview.dataSource = self
     tableview.register(DayTableViewCell.self, forCellReuseIdentifier: "cellId")
@@ -71,14 +86,14 @@ class DashboardViewController: UIViewController {
     ])
   }
   
-  func choiceDate() {
+  private func choiceDate() {
     let elementPicker = UIPickerView()
     elementPicker.delegate = self
     dateTextField.inputView = elementPicker
     elementPicker.backgroundColor = UIColor(named: "Background")
   }
   
-  func createToolbar() {
+  private func createToolbar() {
     let toolbar = UIToolbar()
     toolbar.sizeToFit()
     let doneButton = UIBarButtonItem(title: "Done",
@@ -90,10 +105,6 @@ class DashboardViewController: UIViewController {
     dateTextField.inputAccessoryView = toolbar
     toolbar.tintColor = .white
     toolbar.barTintColor = UIColor(named: "Background")
-  }
-  
-  @objc func dismissKeyboard() {
-    view.endEditing(true)
   }
 }
 

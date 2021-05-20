@@ -7,8 +7,8 @@
 
 import UIKit
 
-class UserGraphCollectionView: UICollectionView {
-  var cells = [UserGraphCollectionViewModel]()
+class UserChartCollectionView: UICollectionView {
+  var cells = [UserChartCollectionViewModel]()
   
   init() {
     let layout = UICollectionViewFlowLayout()
@@ -17,13 +17,13 @@ class UserGraphCollectionView: UICollectionView {
     backgroundColor = UIColor(named: "Background")
     delegate = self
     dataSource = self
-    register(UserGraphCollectionViewCell.self, forCellWithReuseIdentifier: UserGraphCollectionViewCell.reuseId)
+    register(UserChartCollectionViewCell.self, forCellWithReuseIdentifier: UserChartCollectionViewCell.reuseId)
     translatesAutoresizingMaskIntoConstraints = false
-    layout.minimumLineSpacing = UserGraphConstants.userGraphMinimumLineSpacing
+    layout.minimumLineSpacing = UserChartConstants.userChartMinimumLineSpacing
     contentInset = UIEdgeInsets(top: 0,
-                                left: UserGraphConstants.leftDistanceToView,
+                                left: UserChartConstants.leftDistanceToView,
                                 bottom: 0,
-                                right: UserGraphConstants.rightDistanceToView)
+                                right: UserChartConstants.rightDistanceToView)
     showsHorizontalScrollIndicator = false
     showsVerticalScrollIndicator = false
   }
@@ -32,18 +32,18 @@ class UserGraphCollectionView: UICollectionView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func set(cells: [UserGraphCollectionViewModel]) {
+  func set(cells: [UserChartCollectionViewModel]) {
     self.cells = cells
   }
 }
 
-extension UserGraphCollectionView: UICollectionViewDataSource {
+extension UserChartCollectionView: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return cells.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = dequeueReusableCell(withReuseIdentifier: UserGraphCollectionViewCell.reuseId, for: indexPath) as! UserGraphCollectionViewCell
+    let cell = dequeueReusableCell(withReuseIdentifier: UserChartCollectionViewCell.reuseId, for: indexPath) as! UserChartCollectionViewCell
     cell.yearLabel.text = cells[indexPath.row].year
     cell.chart.strokeEnd = cells[indexPath.row].strokeEnd
     cell.chart.shapeLineWidth = 9
@@ -51,8 +51,8 @@ extension UserGraphCollectionView: UICollectionViewDataSource {
   }
 }
 
-extension UserGraphCollectionView: UICollectionViewDelegateFlowLayout {
+extension UserChartCollectionView: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: UserGraphConstants.userGraphItemWidth, height: frame.height )
+    return CGSize(width: UserChartConstants.userChartItemWidth, height: frame.height )
   }
 }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-class YearGraphCollectionViewCell: UICollectionViewCell {
-  static let reuseId = "YearGraphCollectionViewCell"
+class YearChartCollectionViewCell: UICollectionViewCell {
+  static let reuseId = "YearChartCollectionViewCell"
   let chart: ChartView = {
     let view = ChartView()
     view.backgroundColor = UIColor(named: "Background")
@@ -52,6 +52,6 @@ class YearGraphCollectionViewCell: UICollectionViewCell {
 struct YearConstants {
   static let leftDistanceToView: CGFloat = 29
   static let rightDistanceToView: CGFloat = 29
-  static let yearGraphMinimumLineSpacing: CGFloat = 25
-  static let yearGraphItemWidth = (UIScreen.main.bounds.width - YearConstants.leftDistanceToView - YearConstants.rightDistanceToView - (YearConstants.yearGraphMinimumLineSpacing * 6) ) / 7
+  static let yearChartMinimumLineSpacing: CGFloat = 25
+  static let yearChartItemWidth = (UIScreen.main.bounds.width - YearConstants.leftDistanceToView - YearConstants.rightDistanceToView - (YearConstants.yearChartMinimumLineSpacing * 6) ) / 7
 }

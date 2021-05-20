@@ -1,5 +1,5 @@
 //
-//  YearGraphCollectionView.swift
+//  YearChartCollectionView.swift
 //  UserAnalytics
 //
 //  Created by Oleh Dovhan on 05.05.2021.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class YearGraphCollectionView: UICollectionView {
-  var cells = [YearGraphCollectionModel]()
+class YearChartCollectionView: UICollectionView {
+  var cells = [YearChartCollectionModel]()
   
   init() {
     let layout = UICollectionViewFlowLayout()
@@ -17,9 +17,9 @@ class YearGraphCollectionView: UICollectionView {
     backgroundColor = UIColor(named: "Background")
     delegate = self
     dataSource = self
-    register(YearGraphCollectionViewCell.self, forCellWithReuseIdentifier: YearGraphCollectionViewCell.reuseId)
+    register(YearChartCollectionViewCell.self, forCellWithReuseIdentifier: YearChartCollectionViewCell.reuseId)
     translatesAutoresizingMaskIntoConstraints = false
-    layout.minimumLineSpacing = YearConstants.yearGraphMinimumLineSpacing
+    layout.minimumLineSpacing = YearConstants.yearChartMinimumLineSpacing
     contentInset = UIEdgeInsets(top: 0,
                                 left: YearConstants.leftDistanceToView,
                                 bottom: 0,
@@ -32,26 +32,26 @@ class YearGraphCollectionView: UICollectionView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  func set(cells: [YearGraphCollectionModel]) {
+  func set(cells: [YearChartCollectionModel]) {
     self.cells = cells
   }
 }
 
-extension YearGraphCollectionView: UICollectionViewDataSource {
+extension YearChartCollectionView: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return cells.count
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = dequeueReusableCell(withReuseIdentifier: YearGraphCollectionViewCell.reuseId, for: indexPath) as! YearGraphCollectionViewCell
+    let cell = dequeueReusableCell(withReuseIdentifier: YearChartCollectionViewCell.reuseId, for: indexPath) as! YearChartCollectionViewCell
     cell.yearLabel.text = cells[indexPath.row].year
     cell.chart.strokeEnd = cells[indexPath.row].strokeEnd
     return cell
   }
 }
 
-extension YearGraphCollectionView: UICollectionViewDelegateFlowLayout {
+extension YearChartCollectionView: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: YearConstants.yearGraphItemWidth, height: frame.height )
+    return CGSize(width: YearConstants.yearChartItemWidth, height: frame.height )
   }
 }
